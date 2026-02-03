@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
     input: './src/css/*.sass',
     output: './_site/css',
   });
+  eleventyConfig.addWatchTarget('./src/entries/*.md');
   eleventyConfig.addPassthroughCopy('src/css/*.css');
   eleventyConfig.addPassthroughCopy('src/js');
   eleventyConfig.addPassthroughCopy('src/img');
