@@ -12,9 +12,9 @@ const getFilters = (entries) => {
   const filters = new Set();
   for (var i = 0; i < entries.length; i++) {
     var entry = entries[i];
-    if (Object.prototype.hasOwnProperty.call(entry["data"], 'categories')) {
-      for (var j = 0; j < entry["data"]["categories"].length; j++) {
-        filters.add(entry["data"]["categories"][j]);
+    if (Object.prototype.hasOwnProperty.call(entry['data'], 'categories')) {
+      for (var j = 0; j < entry['data']['categories'].length; j++) {
+        filters.add(entry['data']['categories'][j]);
       }
     }
   }
@@ -25,17 +25,19 @@ const getFilters = (entries) => {
 
 const addCategoriesStringsToEntries = (entries) => {
   for (const entry of entries) {
-    if (Object.prototype.hasOwnProperty.call(entry["data"], 'categories')) {
-      entry["data"].categoriesString = entry["data"]["categories"].join(',');
+    if (Object.prototype.hasOwnProperty.call(entry['data'], 'categories')) {
+      entry['data'].categoriesString = entry['data']['categories'].join(',');
     }
   }
 
-  entries.sort((curr, next) => {
-    let currDT = new Date(curr.data.datetime).toISOString()
-    let nextDT = new Date(next.data.datetime).toISOString()
-    console.log(currDT, nextDT)
-    return currDT > nextDT ? 1 : -1
-  }).reverse()
+  entries
+    .sort((curr, next) => {
+      let currDT = new Date(curr.data.datetime).toISOString();
+      let nextDT = new Date(next.data.datetime).toISOString();
+      console.log(currDT, nextDT);
+      return currDT > nextDT ? 1 : -1;
+    })
+    .reverse();
 
   return entries;
 };
