@@ -1,6 +1,6 @@
 const header = { 
-  title: 'Welcome to this wonderful example timeline.', 
-  description: 'This is a description'
+  title: 'vibepwned', 
+  description: 'When vibecoding goes wrong'
 };
 const footer = 'A footer goes here.';
 
