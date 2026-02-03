@@ -7,8 +7,10 @@
     <% if (content.header) { %>
     <header class="page-header">
       <% if (!utilities.isWrappedInParagraphTags(content.header)) { %>
+        <h1><%- content.header.title %></h1>
       <p>
-        <% } %> <%- content.header %> <% if (!utilities.isWrappedInParagraphTags(content.header)) {
+        <% } %> <%- content.header.description %> 
+        <% if (!utilities.isWrappedInParagraphTags(content.header)) {
         %>
       </p>
 

@@ -8,7 +8,7 @@ datetime: '2021-01-01 05:00'
 title: 'Cats are very good'
 image:
   link: 'https://placekitten.com'
-  source: 'https://placekitten.com/200/300'
+  src: 'https://placekitten.com/200/300'
   alt: 'A placeholder kitten'
   caption: 'Kitten!'
 links:
