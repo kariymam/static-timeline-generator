@@ -1,0 +1,43 @@
+@use "_colors"
+
+.timeline-filter ul
+    display: flex
+    gap: 1.25em
+
+.switches input
+    position: absolute
+    clip: rect(0, 0, 0, 0)
+    border: 0
+    overflow: hidden
+    inset: 0
+
+.switches li
+    position: relative
+    display: flex
+
+.switches label
+    display: grid
+    grid-template-columns: auto 1fr
+    column-gap: 4px
+    cursor: pointer
+    align-items: center
+    justify-content: center
+
+.switches li label
+    font-size: 1rem
+    background: color-mix(in srgb, colors.$filterbar-background 50%, white 50%)
+    padding: 4px
+
+    span
+        margin: 0 4px
+
+    &::after
+        content: url(/static/check_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg)
+        width: 24px
+        height: 24px
+        background-color: color-mix(in srgb, colors.$filterbar-background 50%, white 25%)
+
+.switches li:has(input:checked) label::after
+    content: url(/static/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg)
+    width: 24px
+    height: 24px

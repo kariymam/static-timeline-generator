@@ -20,15 +20,19 @@
       <% let entries = content.entries(collections.entries) %>
       <div class="timeline-filter-wrapper">
         <header class="timeline-filter">
-          <ul>
+          <ul class="switches">
             <li>
               <input type="checkbox" name="filter-shortcut" id="all" checked />
-              <label for="all">All</label>
+              <label for="all"><span>All</span></label>
             </li>
             <% content.filters(entries).forEach(function(filter){ %>
             <li>
               <input type="checkbox" name="filter" id="<%= filter %>" checked />
-              <label for="<%= filter %>"><%- utilities.sentenceCase(filter) %> </label>
+              <label for="<%= filter %>">
+                <span>
+                  <%- utilities.sentenceCase(filter) %> 
+                </span>
+              </label>
             </li>
             <% }); %>
           </ul>

@@ -50,10 +50,8 @@ function checkAll() {
   });
   var entries = document.getElementsByClassName('timeline-entry');
   for (var i = 0; i < entries.length; i++) {
-    if (allIsChecked)
-      show(entries[i]);
-    else
-      hide(entries[i]);
+    if (allIsChecked) show(entries[i]);
+    else hide(entries[i]);
   }
   reflowEntries();
 }
