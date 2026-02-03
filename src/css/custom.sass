@@ -25,19 +25,26 @@
 
 .switches li label
     font-size: 1rem
-    background: color-mix(in srgb, colors.$filterbar-background 50%, white 50%)
+    border: 1px solid color-mix(in srgb, colors.$filterbar-background 50%, white 50%)
     padding: 4px
 
     span
-        margin: 0 4px
+        margin: 0 8px 0 8px
 
-    &::after
-        content: url(/static/check_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg)
+    &::before
+        content: ' '
+        object-fit: contain
         width: 24px
         height: 24px
         background-color: color-mix(in srgb, colors.$filterbar-background 50%, white 25%)
 
-.switches li:has(input:checked) label::after
-    content: url(/static/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg)
+.switches li label:hover, .switches li:has(input:checked) label:hover
+    background: color-mix(in srgb, colors.$filterbar-background 50%, white 100%)
+    &::before
+        background-color: color-mix(in srgb, colors.$filterbar-background 50%, blue 25%)
+
+.switches li:has(input:checked) label::before
+    content: url(/static/check_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg)
+    object-fit: contain
     width: 24px
     height: 24px
