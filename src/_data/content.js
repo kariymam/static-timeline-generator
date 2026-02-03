@@ -1,4 +1,7 @@
-const header = 'Welcome to this wonderful example timeline.';
+const header = { 
+  title: 'Welcome to this wonderful example timeline.', 
+  description: 'This is a description'
+};
 const footer = 'A footer goes here.';
 
 // Page details
