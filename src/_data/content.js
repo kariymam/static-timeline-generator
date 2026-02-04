@@ -1,6 +1,6 @@
 const header = { 
   title: 'vibepwned', 
-  description: "Vibecoding to move even faster and break everything imaginable"
+  description: "Vibe coding to move even faster and break everything imaginable"
 };
 const footer = 'A footer goes here.';
 
